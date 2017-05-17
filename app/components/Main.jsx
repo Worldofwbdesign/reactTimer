@@ -5,7 +5,7 @@ let Main = (props) => {
   return (
       <div>
         <Nav/>
-        <h1>React app</h1>
+        <h1 className="text-center">React app</h1>
         {props.children}
       </div>
   );
