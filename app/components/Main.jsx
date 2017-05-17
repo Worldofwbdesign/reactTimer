@@ -6,6 +6,7 @@ let Main = (props) => {
       <div>
         <Nav/>
         <h1>React app</h1>
+        {props.children}
       </div>
   );
 }
