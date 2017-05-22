@@ -35,6 +35,18 @@ describe('Countdown', () => {
         expect(countdown.state.count).toBe(0);
         done();
       }, 3000);
+    });
+
+    it('should pause on status change', () => {
+      let countdown = TestUtils.renderIntoDocument(<Countdown/>);
+      countdown.handleSetCountdown(3);
+      countdown.handleStatusChange('paused');
+
+      setTimeout(() => {
+        expect(countdown.state.count).toBe(3);
+        expect(countdown.state.countdownStatus).toBe('paused');
+      });
+
     })
   })
 
